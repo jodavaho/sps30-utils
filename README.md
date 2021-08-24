@@ -10,3 +10,14 @@ In an early alpha state!
 
 The open-source Sensirion example code.  A debian operating system.  A UART wired up to the sps30
 
+# Modules required 
+
+## Raspberry pi
+
+In /etc/modules add:
+
+```
+crc8
+industrialio
+sps30
+```
