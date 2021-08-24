@@ -1,0 +1,12 @@
+[Unit]
+Description=Start i2c service for sps30 
+#After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c "echo sps30 0x69 > /sys/class/i2c-adapter/i2c-1/new_device"
+RemainAfterExit=true
+ExecStop=/bin/bash -c "echo 0x69 > /sys/class/i2c-adapter/i2c-1/delete_device"
+
+[Install]
+WantedBy=multi-user.target
