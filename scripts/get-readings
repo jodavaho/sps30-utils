@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "pm 1.0"
+cat /sys/bus/i2c/devices/1-0069/iio\:device0/in_massconcentration_pm1_input
+echo "pm 2.5 [0,12] good,[12.1,35.4] mod,[35.5,55.4] sensitive,[55.5+] unhealthy"
+cat /sys/bus/i2c/devices/1-0069/iio\:device0/in_massconcentration_pm2p5_input
+echo "pm 4.0"
+cat /sys/bus/i2c/devices/1-0069/iio\:device0/in_massconcentration_pm4_input
+echo "pm 10.0"
+cat /sys/bus/i2c/devices/1-0069/iio\:device0/in_massconcentration_pm10_input
